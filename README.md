@@ -51,6 +51,7 @@ public interface Problem {
 }
 ```
 
+
 - `fit` : 해당 x좌표의 y 좌표를 구하는 함수
 - `isNeighborBetter` : 후보해와 이웃해를 비교하며 무엇이 더 적합한지를 확인하는 함수
 
@@ -82,6 +83,7 @@ public class Main {
     }
 }
 ```
+
 
 - `fit` 과 `isNeighborBetter`를 오버라이딩해준다.
 
@@ -142,6 +144,7 @@ public class SimulatedAnnealing {
 
 
 
+
 ## 4차 함수 전역 최적점
 
 y = x^4 - x^3 - 5x^2 - 5
@@ -152,6 +155,7 @@ y = x^4 - x^3 - 5x^2 - 5
 
 t = 1, a = 0.99로 설정
 
+
 [결과값]
 
 <img src="https://user-images.githubusercontent.com/73464584/121654180-6d464300-cad8-11eb-9141-7a27da967cad.png" alt="image-20210611171339520" style="zoom:150%;" />
@@ -159,6 +163,7 @@ t = 1, a = 0.99로 설정
 최적해와 유사한 값임을 확인해볼수 있다.
 
 p0의 값을 임의로 0.001로 해준 후 결과를 구해주면, 정확도가 매우 높은 최적해를 구할 수 있다.
+
 
 
 
@@ -179,6 +184,7 @@ p0의 값을 임의로 0.001로 해준 후 결과를 구해주면, 정확도가 
 
 
 
+
 #### 추정
 
 - 우리가 알고 싶은 방정식은 원래의 자료와의 오차(error)를 가장 적게 차이나도록 구성된 식이다.
@@ -187,7 +193,7 @@ p0의 값을 임의로 0.001로 해준 후 결과를 구해주면, 정확도가 
 
   따라서, 이래에 표현된 그림은 독립변수 x와 종속 변수 y 그리고 두 변수들간의 상관관계를 표현한 회귀선을 나타낸 그림이다.
 
-<img src="C:\Users\82106\AppData\Roaming\Typora\typora-user-images\image-20210611181308764.png" alt="image-20210611181308764" style="zoom:80%;" />
+![image-20210611181308764](https://user-images.githubusercontent.com/73464584/121698549-1311a600-cb09-11eb-86a7-edf3c356a886.png)
 
 x축은 소요 시간을 y축은 양초의 길이이며, 점으로 해당 데이터들을 표현하였다.
 
@@ -210,6 +216,7 @@ x축은 소요 시간을 y축은 양초의 길이이며, 점으로 해당 데이
 <img src="https://user-images.githubusercontent.com/73464584/121677347-b609f600-caf0-11eb-96cc-ee23de96ed73.png" alt="image-20210611200727758" style="zoom:67%;" />
 
 이 것을 우리는 `비용 함수(cost function)`이라 한다.
+
 
 ```java
 double[] value = {30, 27, 24, 20, 17, 14, 11, 9, 5, 2};
